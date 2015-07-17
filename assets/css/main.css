@@ -58,6 +58,9 @@ html {
   box-sizing: inherit;
 }
 
+body, table, tr, td, button, input {
+	font-family: 'Montserrat', arial, sans-serif;
+}
 
 /* Layout */
 .wrapper {
@@ -71,7 +74,7 @@ html {
 /* Calculator */
 h1 {
 	text-align: center;
-	font-size: 40px;
+	font-size: 30px;
 	margin-bottom: 40px;
 }
 
@@ -79,39 +82,44 @@ h1 {
 	width: 100%;
 	border: 2px solid #666;
 	border-radius: 5px;
-	padding: 40px;
+	padding: 40px 20px 10px 20px;
 }
 
 #result {
 
-	background: #999;
-	color: #fff;
+	background: #ddd;
 	text-align: right;
 	padding: 20px;
 	margin: 0 10px 20px 10px;
 }
 
-.numbers {
+.buttons {
 	margin-bottom: 20px;
 	width: 100%;
 }
-.numbers:before,
-.numbers:after {
+.buttons:before,
+.buttons:after {
 	content: '';
 	display: table;
 }
-.numbers:after {
+.buttons:after {
 	clear: both;
 }
 
-.numbers td {
-	width: 33.33%;
+.buttons td {
+	width: 25%;
 	padding: 10px;
 }
-.numbers td button {
+.buttons td button {
 	width: 100%;
 	text-align: center;
 	padding: 20px 0;
+	border: 1px solid #ddd;
+	background: #ddd;
+}
+#equals {
+	background: #48C7A3;
+	border: 1px solid #48C7A3;
 }
 
 

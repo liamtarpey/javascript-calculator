@@ -11,11 +11,11 @@ var calculator = {
 	// Temporary number that's been typed in
 	tempNumber : "",
 
+	// Calculation type (add/subtract/multiply/divide)
 	type : "",
 
 	// Temp result 
 	temp : function (val) {
-
 
 		this.tempNumber += val.toString();
 		this.displayResult(this.tempNumber);
@@ -60,6 +60,7 @@ var calculator = {
 	// Function when click on equals button
 	equals : function() {
 
+		// Calculate total based on type
 		switch(this.type) {
 
 			case "add" : this.total = Number(this.total) + Number(this.tempNumber);
