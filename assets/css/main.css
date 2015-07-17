@@ -63,7 +63,8 @@ html {
 .wrapper {
 	width: 100%;
 	margin: 60px auto;
-	max-width: 500px;
+	max-width: 400px;
+	padding: 0 20px;
 }
 
 
@@ -87,7 +88,30 @@ h1 {
 	color: #fff;
 	text-align: right;
 	padding: 20px;
-	margin-bottom: 40px;
+	margin: 0 10px 20px 10px;
+}
+
+.numbers {
+	margin-bottom: 20px;
+	width: 100%;
+}
+.numbers:before,
+.numbers:after {
+	content: '';
+	display: table;
+}
+.numbers:after {
+	clear: both;
+}
+
+.numbers td {
+	width: 33.33%;
+	padding: 10px;
+}
+.numbers td button {
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
 }
 
 

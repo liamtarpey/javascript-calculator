@@ -38,8 +38,8 @@ var calculator = {
 
 
 		// logs
-		console.log("total: ", this.total);
-		console.log("temp: ", this.tempNumber);	
+		// console.log("total: ", this.total);
+		// console.log("temp: ", this.tempNumber);	
 
 		// Display total amount 
 		this.displayResult(this.total);

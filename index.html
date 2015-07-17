@@ -14,18 +14,28 @@
             <h1>Javascript Calculator</h1>
             <div class="calculator">
                 <div id="result">0</div>
-                <div class="numbers">
-                    <button id="zero" onclick="calculator.temp(0)">0</button>
-                    <button id="one" onclick="calculator.temp(1)">1</button>
-                    <button id="two" onclick="calculator.temp(2)">2</button>
-                    <button id="three" onclick="calculator.temp(3)">3</button>
-                    <button id="four" onclick="calculator.temp(4)">4</button>
-                    <button id="five" onclick="calculator.temp(5)">5</button>
-                    <button id="six" onclick="calculator.temp(6)">6</button>
-                    <button id="seven" onclick="calculator.temp(7)">7</button>
-                    <button id="eight" onclick="calculator.temp(8)">8</button>
-                    <button id="nine" onclick="calculator.temp(9)">9</button>
-                </div>
+                <table class="numbers">
+                    <tr>
+                        <td><button id="one" onclick="calculator.temp(1)">1</button></td>
+                        <td><button id="two" onclick="calculator.temp(2)">2</button></td>
+                        <td><button id="three" onclick="calculator.temp(3)">3</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="four" onclick="calculator.temp(4)">4</button></td>
+                        <td><button id="five" onclick="calculator.temp(5)">5</button></td>
+                        <td><button id="six" onclick="calculator.temp(6)">6</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button id="seven" onclick="calculator.temp(7)">7</button></td>
+                        <td><button id="eight" onclick="calculator.temp(8)">8</button></td>
+                        <td><button id="nine" onclick="calculator.temp(9)">9</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="zero" onclick="calculator.temp(0)">0</button></td>
+                        <td><button id="nine" onclick="calculator.temp('.')">.</button></td>
+                    </tr>
+                </table>
                 <div class="buttons">
                     <button id="plus" onclick="calculator.calculate('add')">+</button>
                     <button id="subtract" onclick="calculator.calculate('subtract')">-</button>
