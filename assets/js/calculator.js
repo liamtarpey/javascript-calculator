@@ -1,62 +1,84 @@
 
 // Vars
-var result = document.getElementById("result");
-
+var resultHTML = document.getElementById("result");
 
 // Calculator
 var calculator = {
 
 	// Initial result
-	total : 0,
+	total : "",
 
+	// Temporary number that's been typed in
 	tempNumber : "",
+
+	type : "",
 
 	// Temp result 
 	temp : function (val) {
 
-		if(this.total == 0) {
 
-			this.tempNumber += val.toString();
-			this.displayResult(this.tempNumber);
-			console.log(this.tempNumber);
-		}
+		this.tempNumber += val.toString();
+		this.displayResult(this.tempNumber);
 	},
 
-	// Add number to total
-	doSomething : function(type) {
+	// Calculate result
+	calculate : function(type) {
 
-		// Current total equals the temporary number that's been typed in
-		this.total = this.tempNumber;
+		// Set type to current value
+		this.type = type;
+
+		// Make tempBumber become total result
+		if(this.total == "") {
+
+			this.total = this.tempNumber;
+		} 
 
 		// Reset tempNumber to empty string
 		this.tempNumber = "";
 
+
+		// logs
+		console.log("total: ", this.total);
+		console.log("temp: ", this.tempNumber);	
+
 		// Display total amount 
 		this.displayResult(this.total);
-
-		if(type == "add") {
-
-
-		};
 	},
 
 	// Resets calculator
 	clear : function() {
 
+		// Reset all values & strings
 		this.total = 0;
+		this.tempNumber = "";
+		this.type = "";
+
+		// Push zero back to results
 		this.displayResult(this.total);
 	},
 
 	// Function when click on equals button
 	equals : function() {
 
-		//return this.total;
+		switch(this.type) {
+
+			case "add" : this.total = Number(this.total) + Number(this.tempNumber);
+				break;
+			case "subtract" : this.total = Number(this.total) - Number(this.tempNumber);
+				break;
+			case "multiply" : this.total = Number(this.total) * Number(this.tempNumber);
+				break;
+			case "divide" : this.total = Number(this.total) / Number(this.tempNumber);
+				break;
+		}
+
 		this.displayResult(this.total);
 	},
 
+	// Displays final result on the client side
 	displayResult : function(val) {
 
-		result.innerHTML = val;
+		resultHTML.innerHTML = val;
 	}
 };
 
